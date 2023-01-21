@@ -6,7 +6,8 @@ empdata = pd.read_csv('us-500.csv', index_col=False, delimiter = ',')
 empdata.head()
 
 try:
-    conn = mysql.connect(host='localhost', database='employee', user='root', password='Smart@123')
+    # give your own DB details 
+    conn = mysql.connect(host='localhost', database='employee', user='root', password='*******')
     if conn.is_connected():
         cursor = conn.cursor()
         cursor.execute("select database();")
